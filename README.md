@@ -1,4 +1,4 @@
  ![logo](logo.png) 
- <span>Agility-Star</span> <br/>
+# Agility Star <br/>
  ----
 HANDS ON PHP WEB APP IN PROGRESS
