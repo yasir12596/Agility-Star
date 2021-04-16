@@ -1,15 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 body{
     font-family:'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 a{
     text-decoration: none;
+    color: white;
 }
 button{
+    font-family:'Poppins', sans-serif;
     outline: none;
     border: none;
+    cursor: pointer;
+}
+input{
+    font-family:'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    color:white;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+input::placeholder{
+    font-family:'Poppins', sans-serif;
+    color:white;
+    opacity: 0.5;
+    letter-spacing: 0.7px;
+    font-size: 0.65rem;
+    padding-left: 70px;
+}
+input::-webkit-calendar-picker-indicator {
+    opacity: 100;
+    cursor: pointer;
+
+}
+img{
+    pointer-events: none;
 }
 /* ---------- Slider starts from here --------*/
 .landing-page1{
@@ -43,7 +74,8 @@ button{
     width: 100%;
     height: 73vh;
 }
-.slide-position,.slide,.logo-box{
+/*-------Flex Positions------*/
+.slide-position,.slide,.logo-box,.land-box,.sign-up{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,10 +108,9 @@ button{
 }
 .slide-title{
     font-size: 2.2rem;
-    font-weight:100;
     line-height: 2px;
 }
-.slide-desc{
+.slide-desc,.verification-ctns .already,.forget,.half-opacity{
     opacity: 0.7;
 }
 
@@ -139,4 +170,317 @@ button{
     letter-spacing: 1px;
     padding-left: 35px;
 }
-/* ---------- Starts from here --------*/
+/* ---------- Landing Page (Sign up/Login) --------*/
+.land-box{
+    position: relative;
+    height: 100vh;
+    background-color: #330767;
+    color:white;
+    flex-direction: column;
+}
+.land-desc{
+    padding-top: 80px;
+    width: 45%;
+}
+.verification-ctns{
+    padding-top: 100px;
+    text-align: center;
+}
+.signup-btn{
+    font-size: 0.7em;
+    padding: 15px 50px;
+    background: #330767;
+    box-shadow: -10px -10px 30px #3b0777, 10px 10px 30px rgba(33, 8, 62, 0.76);
+    border-radius: 3px;
+}
+.verification-ctns p{
+    padding-top: 40px;
+    font-size: 0.9rem;
+}
+.login-btn{
+    text-decoration: underline;
+    color: #C38CEE;
+}
+.land-title,.signup-title{
+    font-size: 2.5vw;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.land-about{
+    font-size: 1.1rem;
+}
+.land-logo img{
+    width: 60%;
+}
+.top-left,.bottom-right{
+    position: absolute;
+}
+.top-left{
+    top:0;
+    left: 0;
+}
+.bottom-right{
+    right: 0;
+    bottom: 0;
+}
+/*--------------Sign up Page-------------*/
+
+.sign-up{
+    position: relative;
+    height: 100vh;
+    background-color: #330767;
+    color: white;
+    flex-wrap: wrap;
+}
+.signup-form,.signup-thumb{
+    z-index: 100;
+}
+.signup-form form input{
+    background-color: #472076;
+    height: 45px;
+    width: 240px;
+    padding: 5px 15px;
+}
+#email{
+    width: 280px;
+}
+.signup-title{
+    width: 100%;
+    text-align: center;
+    margin-top: -30px;
+    padding-bottom: 50px;
+}
+.signup-thumb img{
+    width: 80%;
+}
+.createAcc-btn{
+    background-color: #330767;
+    box-shadow: -10px -10px 30px #3b0777, 10px 10px 30px rgba(33, 8, 62, 0.76);
+    height: 40px;
+    width: 140px;
+    font-size: 0.6rem;
+    cursor: pointer;
+}
+.signup-footer{
+    font-size: 0.7rem;
+}
+.policy-accept{
+    flex: 1;
+}
+.create-section{
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+.signup-footer p{
+    width: 100%;
+    text-align: center;
+}
+.division{
+    position: relative;
+    height: 10vh;
+    margin-top: 20px;
+}
+.division span{
+    width: 100%;
+    height: 0.5px;
+    background-color: white;
+    opacity: 0.4;
+}
+.division p,.division span{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.division p{
+    top: 20px;
+    background:#330767;
+    width: 50px;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    z-index: 1;
+}
+#chkbox{
+    width:14px;
+    height: 14px;
+    margin-right: 10px;
+    transform: translateY(2px);
+}
+.email,.pass{
+    border-radius: 3px;
+    background-color: #472076;
+    padding: 0 0px 0 20px;
+}
+.email input::placeholder,.pass input::placeholder{
+    padding-left: 10px;
+}
+.f-pass{
+    position: relative;
+    width: 100%;
+    height: 25px;
+}
+.forget{
+    position: absolute;
+    right: 0;
+    top: 4px;
+    color: #C38CEE;
+    font-size: 0.6em;
+    letter-spacing: 0.7px;  
+}
+/* Main Application Styling*/
+.Agility-star{
+    display: flex;
+    background-color: #330767;
+    height: 100vh;
+}
+.menu-bar-section{
+    display: flex;
+    flex-direction: column;
+    border-right: 0.5px solid rgba(255, 255, 255, 0.2);
+    width: 270px;
+    margin: 10px 0px;
+}
+.logo-name{
+    font-size: 1rem;
+    color: white;
+    font-weight: 700;
+}
+.logo-area{
+    padding-top: 35px;
+    flex: 0.32;
+}
+.logo-area img{
+    padding-right: 7px;
+}
+.menu-list{
+    flex: 2;
+    flex-direction: column;
+    line-height: 55px;
+    padding-top: 65px;
+}
+.list{
+    position: relative;
+    width: 100%
+}
+.active-link{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right:-4.6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.logout-section{
+    flex: 0.5;
+}
+.list-name{
+    padding-left: 10px;
+}
+.list a{
+    display: flex;
+    font-size: 0.8em;
+}
+.logo-area,.list a,.logout-section{
+    padding-left: 50px;
+}
+.icons{
+    width: 25px;
+}
+.logout-btn{
+    font-size: 0.7rem;
+    position: absolute;
+    color: white;
+    background: linear-gradient(to right,rgba(107,21,202,1),rgba(43,7,83,1));
+}
+.logout-btn,.btn-outline{
+    width: 140px;
+    height: 40px;
+    border-radius: 6px;
+}
+.btn-outline{
+    padding: 2px;
+    background:linear-gradient(to bottom right, rgba(204,172,240,0.8),rgba(107,21,202,0.1));
+}
+.logout-arrow{
+   padding-left: 15px;
+}
+.full-opacity{
+    opacity: 1;
+}
+/*-----Search Area------*/
+.main-area{
+    width: 100%;
+}
+.search-area,.search-team{
+    display: flex;
+}
+.search-area{
+    
+    height: 10vh;
+    align-items: center;
+    margin: 0px 10px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+.menu-title{
+    flex: 1;
+    padding-left: 30px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.search-team{
+    flex: 0.1;
+    padding-right: 25px;
+    align-items: center;
+}
+.search-box{
+    display: flex;
+    overflow: hidden;
+    width: 25px;
+    height: 25px;
+    margin-right: 35px;
+    padding: 7px 0px 7px 15px;
+    border-radius: 3px;
+    transition: 0.4s ease-out;
+}
+.search-box:active{
+    width: 500px;
+    background-color: #250F40;
+}
+.search-icon{
+    margin-right: 8px;
+}
+#search-area{
+    background-color: transparent;
+    width: 220px;
+}
+#search-area::placeholder{
+    padding-left: 0px;
+    transform: translateY(-2px);
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.6rem;
+}
+.add-search-team-btn{
+    background-color: transparent;
+    color: white;
+    padding:0 5px 0px 8px;
+}
+.notification{
+    padding: 7px 0 0 0;
+    margin-right: 35px;
+}
+.profile-thumb{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    overflow: hidden;
+}
+.profile-thumb img{
+    width: 100%;
+    transform: translateY(2px);
+}
