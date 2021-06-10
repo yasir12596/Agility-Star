@@ -1,0 +1,219 @@
+.container{
+width: 50%%;
+height: auto;
+background-color: #330767;
+}
+.main{
+max-width: 1200px;
+height: auto;
+margin:  auto;
+
+
+}
+nav{
+width: 100%;
+height: 100px;
+background-color:#330767; 
+}
+
+.logo{
+	float: left;
+	border:3.5px solid #000;
+	line-height: 30px;
+	border-color: #01d7a7;
+	font-family: Fantasy;
+	color: #fff;
+margin-top: 2px;
+
+}
+
+nav ul{
+	float: right;
+margin-top: 25px;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	}
+
+nav ul li{
+	position: relative;
+	padding: 0 20px;
+	height: 100%;
+	display: flex;
+}
+nav ul li a{
+	z-index: 1;
+	text-decoration: none;
+	color: white;
+	font-family: 'poppins',sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	padding: 10px 5px;
+
+}
+/** setting for hover effect*/
+nav ul li:before{
+
+content: "";
+position: absolute;
+height: 33.33%;
+width: 0%;
+background-color: #01d7a7;
+right: 0;
+z-index: 0;
+top: 33.33%;
+transition: all 0.6s;/** this will add slow start effect*/
+}
+
+nav ul li:after{
+content: "";
+position: absolute;
+height: 33.33%;
+width: 0%;
+background-color: #01d7a7;
+left: 0;
+z-index: 0;
+bottom: 0;
+transition: all 0.6s;
+
+}
+nav ul li a:before{
+content: "";
+position: absolute;
+height: 33.33%;
+width: 0%;
+background-color: #01d7a7;
+bottom: 66%;
+left: 0;
+transition: all 0.6s;
+
+}
+/**Applying hover effect on nav */
+nav ul li:hover:before,
+nav ul li:hover:after,
+nav ul li:hover nav ul li a:before{
+	width: 100%;
+}
+
+
+*
+{
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'poppins', sans-serif;
+
+
+}
+section{
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(-40deg, #D7BDE2 0%, #262626 50%, #C0392B 50%,#F1948A 100%)
+}
+section.s2{
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(10deg, #D7BDE2 0%, #7FB3D5  50%,#808B96 50%,#F1948A 100%)
+}
+
+.box{
+
+width: 300px;
+height: 450px;
+padding: 40px;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(255,255,255,0.2);
+border-radius: 8px;
+box-shadow: 0 5px 35px;
+margin-top: -90px;
+}
+.box .form{
+
+	position: relative;
+	width: 100%
+}
+.box .form h1{
+
+font-family: Times New Roman;
+	color: white;
+	font-weight: 300;
+	letter-spacing: 3px;
+	margin-bottom: 30px;
+}
+.box .form .inputx{
+
+position: relative;
+width: 100%;
+margin-bottom: 20px;
+
+
+}
+.box .form .inputx input{
+
+width: 100%;
+outline: none;
+border:1px solid rgba(255,255,255,0.2);
+background: transparent;
+padding: 6px 8px;
+padding-left: 40px;
+border-radius: 4px;
+color: white;
+font-size: 14px;
+font-weight: 300;
+
+
+
+
+}
+.box .form .inputx img{
+
+
+	position: absolute;
+	top: 8px;
+    left: 10px;
+    transform:scale(0.6);
+       filter: invert(1);
+}
+.box .form .inputx input[type="submit"]{
+ 
+ background: white;
+ color: #111;
+ width: 100%;
+ padding: 6px 8px;
+ box-shadow: inset 0 0 25px rgba(0,0,0,0.2);
+ font-weight: 400;
+ letter-spacing: 1px;
+ cursor: pointer;
+ font-family: Times New Roman;
+
+
+}
+.box .form .inputx input[type="submit"]:hover{
+
+
+background-color: #85929E;
+	cursor: pointer;
+}
+p{
+
+color: #fff;
+font-weight: 300;
+font-size: 16px;
+margin-top: 12px;
+}
+a{
+	color: white;
+}
